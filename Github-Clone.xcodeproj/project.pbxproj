@@ -27,6 +27,17 @@
 		4945E8F726726FEE00BF769F /* Alertable_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8F626726FEE00BF769F /* Alertable_Ext.swift */; };
 		4945E8F92672702200BF769F /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8F82672702200BF769F /* RootRouter.swift */; };
 		4945E8FB2672706B00BF769F /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8FA2672706B00BF769F /* ListRouter.swift */; };
+		49C1043C26728F970007436A /* GitHubEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043B26728F970007436A /* GitHubEndPoint.swift */; };
+		49C1043E267290280007436A /* NetworkResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043D267290280007436A /* NetworkResponsable.swift */; };
+		49C104402672903D0007436A /* NetworkResponseMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043F2672903D0007436A /* NetworkResponseMessages.swift */; };
+		49C10442267290560007436A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C10441267290560007436A /* ParameterEncoding.swift */; };
+		49C10444267290700007436A /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C10443267290700007436A /* URLParameterEncoder.swift */; };
+		49C10446267290860007436A /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C10445267290860007436A /* JSONParameterEncoder.swift */; };
+		49C104482672909F0007436A /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C104472672909F0007436A /* NetworkRouter.swift */; };
+		49C1044A267290BE0007436A /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C10449267290BE0007436A /* HTTPTask.swift */; };
+		49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044B267290CE0007436A /* HTTPMethod.swift */; };
+		49C1044E267290E40007436A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044D267290E40007436A /* Router.swift */; };
+		49C10450267290F60007436A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044F267290F60007436A /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +63,17 @@
 		4945E8F626726FEE00BF769F /* Alertable_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable_Ext.swift; sourceTree = "<group>"; };
 		4945E8F82672702200BF769F /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
 		4945E8FA2672706B00BF769F /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		49C1043B26728F970007436A /* GitHubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEndPoint.swift; sourceTree = "<group>"; };
+		49C1043D267290280007436A /* NetworkResponsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponsable.swift; sourceTree = "<group>"; };
+		49C1043F2672903D0007436A /* NetworkResponseMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseMessages.swift; sourceTree = "<group>"; };
+		49C10441267290560007436A /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		49C10443267290700007436A /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		49C10445267290860007436A /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		49C104472672909F0007436A /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		49C10449267290BE0007436A /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		49C1044B267290CE0007436A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		49C1044D267290E40007436A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		49C1044F267290F60007436A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +90,10 @@
 		4905F36926725DD5006D51CC /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				49C1043A26728F600007436A /* Service */,
+				49C1043926728F5A0007436A /* Endpoint */,
+				49C1043826728F560007436A /* Manager */,
+				49C1043726728F4C0007436A /* Encoding */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -221,6 +247,45 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		49C1043726728F4C0007436A /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				49C10441267290560007436A /* ParameterEncoding.swift */,
+				49C10443267290700007436A /* URLParameterEncoder.swift */,
+				49C10445267290860007436A /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		49C1043826728F560007436A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				49C1043D267290280007436A /* NetworkResponsable.swift */,
+				49C1043F2672903D0007436A /* NetworkResponseMessages.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		49C1043926728F5A0007436A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				49C1043B26728F970007436A /* GitHubEndPoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		49C1043A26728F600007436A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				49C104472672909F0007436A /* NetworkRouter.swift */,
+				49C10449267290BE0007436A /* HTTPTask.swift */,
+				49C1044B267290CE0007436A /* HTTPMethod.swift */,
+				49C1044D267290E40007436A /* Router.swift */,
+				49C1044F267290F60007436A /* EndPointType.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,17 +359,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				49307E4126724FA500039E62 /* AppDelegate.swift in Sources */,
+				49C1043E267290280007436A /* NetworkResponsable.swift in Sources */,
+				49C10442267290560007436A /* ParameterEncoding.swift in Sources */,
+				49C104482672909F0007436A /* NetworkRouter.swift in Sources */,
 				4945E8F92672702200BF769F /* RootRouter.swift in Sources */,
+				49C10446267290860007436A /* JSONParameterEncoder.swift in Sources */,
 				4945E8F326726F9100BF769F /* UITableView_Ext.swift in Sources */,
+				49C1043C26728F970007436A /* GitHubEndPoint.swift in Sources */,
+				49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */,
 				4945E8F126726F6B00BF769F /* RootWireFrame.swift in Sources */,
 				4945E8F526726FB600BF769F /* Indicatable_Ext.swift in Sources */,
+				49C10450267290F60007436A /* EndPointType.swift in Sources */,
 				4945E8E526726C4800BF769F /* GitHubListVC+TableView.swift in Sources */,
+				49C1044E267290E40007436A /* Router.swift in Sources */,
 				4945E8E926726D4E00BF769F /* ImageManager.swift in Sources */,
+				49C1044A267290BE0007436A /* HTTPTask.swift in Sources */,
 				4945E8ED26726F3A00BF769F /* NibLoadable.swift in Sources */,
+				49C10444267290700007436A /* URLParameterEncoder.swift in Sources */,
 				4945E8FB2672706B00BF769F /* ListRouter.swift in Sources */,
 				4945E8EF26726F5000BF769F /* Reusable.swift in Sources */,
 				4945E8F726726FEE00BF769F /* Alertable_Ext.swift in Sources */,
 				4905F37426725E7E006D51CC /* GitHubListVC.swift in Sources */,
+				49C104402672903D0007436A /* NetworkResponseMessages.swift in Sources */,
 				4945E8E226726BE500BF769F /* CardView.swift in Sources */,
 				4945E8DF26726B0700BF769F /* ListTableViewCell.swift in Sources */,
 				4945E8EB26726F2100BF769F /* ViewProtocols.swift in Sources */,

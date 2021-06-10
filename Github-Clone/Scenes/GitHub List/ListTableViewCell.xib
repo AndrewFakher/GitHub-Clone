@@ -88,6 +88,12 @@
                     <constraint firstAttribute="bottom" secondItem="uIn-ZN-ooN" secondAttribute="bottom" constant="12" id="tkN-nV-als"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="UserImg" destination="REp-7r-svZ" id="vUt-eG-ve3"/>
+                <outlet property="creationDateLabel" destination="njL-fx-HR0" id="lYO-al-uNx"/>
+                <outlet property="repoNameLabel" destination="ukW-Zb-801" id="lHw-9n-Tfw"/>
+                <outlet property="userNameLabel" destination="hVF-qE-mEw" id="Wv9-8K-bLB"/>
+            </connections>
             <point key="canvasLocation" x="100.72463768115942" y="294.30803571428572"/>
         </tableViewCell>
     </objects>

@@ -10,6 +10,11 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell, NibLoadable {
 
+    @IBOutlet weak var creationDateLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var repoNameLabel: UILabel!
+    @IBOutlet weak var UserImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
