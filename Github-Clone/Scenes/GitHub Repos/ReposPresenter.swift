@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ReposVCPresenter{
+class ReposPresenter{
     
     private weak var view: RepoView?
     private let repository = ReposListRepository()
@@ -24,6 +24,20 @@ class ReposVCPresenter{
 
     init(view: RepoView){
         self.view = view
+    }
+    
+    func getRepos(){
+        view?.showIndicator()
+        repository.getAllRepos { repos, error in
+            self.view?.hideIndicator()
+            if let repos = repos {
+                self.repos = repos
+                self.view?.fetchingReposSuccess()
+            }
+            if let error = error{
+                self.view?.showError(error: error)
+            }
+        }
     }
     
     func getSearchedRepos(query:String){

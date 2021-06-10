@@ -10,7 +10,7 @@ import Foundation
 class ReposListRepository: NetworkResponsable {
     let router = Router<GitHubApi>()
     
-    func searchRecipe(completion: @escaping (_ repos: [RepoModel],_ error: String?)->()){
+    func getAllRepos(completion: @escaping (_ repos: [RepoModel]?,_ error: String?)->()){
         router.request(.reposList) { data, response, error in
             if error != nil {
                 completion([],"Please check your network connection.")

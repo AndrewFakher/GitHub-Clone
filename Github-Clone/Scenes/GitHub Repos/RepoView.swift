@@ -12,7 +12,7 @@ import UIKit
 protocol RepoView: Alertable, Indicatable {
     func showIndicator()
     func hideIndicator()
-    func reloadingTableView()
+    func fetchingReposSuccess()
     func showError(error: String)
     func noReposFoundedView()
     func handlingSearchBarText(searchBarText: String)

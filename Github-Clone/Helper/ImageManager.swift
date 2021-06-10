@@ -19,7 +19,7 @@ class ImagesManager {
                 completionHandler(image)
             }
         } else {
-            let placeholderImage = #imageLiteral(resourceName: "istockphoto-1016744034-612x612.jpg")
+            let placeholderImage = #imageLiteral(resourceName: "placeholder")
             DispatchQueue.main.async {
                 completionHandler(placeholderImage)
             }

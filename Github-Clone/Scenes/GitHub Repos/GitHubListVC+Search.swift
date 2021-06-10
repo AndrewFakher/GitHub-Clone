@@ -10,8 +10,8 @@ import UIKit
 extension GitHubListVC: UISearchBarDelegate{
     
     func setupSearchBar(){
-        searchBar.placeholder = "Search for Repos..."
-        searchBar.tintColor = #colorLiteral(red: 0.7450980544, green: 0.1568627506, blue: 0.07450980693, alpha: 1)
+        searchBar.placeholder = "Search..."
+        searchBar.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)
         self.navigationItem.leftBarButtonItem = leftNavBarButton
         searchBar.delegate = self

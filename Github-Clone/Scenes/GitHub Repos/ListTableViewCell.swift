@@ -12,10 +12,17 @@ class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var repoNameLabel: UILabel!
-    @IBOutlet weak var UserImg: UIImageView!
+    @IBOutlet weak var UserImg: UIImageView!{
+        didSet{
+            UserImg.layer.cornerRadius = UserImg.frame.size.width / 2
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.clear
+        self.selectedBackgroundView = backgroundView
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
