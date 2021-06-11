@@ -43,6 +43,11 @@
 		49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044B267290CE0007436A /* HTTPMethod.swift */; };
 		49C1044E267290E40007436A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044D267290E40007436A /* Router.swift */; };
 		49C10450267290F60007436A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044F267290F60007436A /* EndPointType.swift */; };
+		49E4790F2673688400DD76AD /* RepoDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4790E2673688400DD76AD /* RepoDetailsVC.swift */; };
+		49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E479102673689E00DD76AD /* RepoDetailsView.storyboard */; };
+		49E47913267369F800DD76AD /* RepoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E47912267369F800DD76AD /* RepoDetailsRouter.swift */; };
+		49E4791626736A6100DD76AD /* RepoDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4791526736A6100DD76AD /* RepoDetailsPresenter.swift */; };
+		49E4791826736A6D00DD76AD /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4791726736A6D00DD76AD /* RepoDetailsView.swift */; };
 		4A90CA75416BC7686821C03C /* Pods_Github_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +91,11 @@
 		49C1044B267290CE0007436A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		49C1044D267290E40007436A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		49C1044F267290F60007436A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		49E4790E2673688400DD76AD /* RepoDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsVC.swift; sourceTree = "<group>"; };
+		49E479102673689E00DD76AD /* RepoDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoDetailsView.storyboard; sourceTree = "<group>"; };
+		49E47912267369F800DD76AD /* RepoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsRouter.swift; sourceTree = "<group>"; };
+		49E4791526736A6100DD76AD /* RepoDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsPresenter.swift; sourceTree = "<group>"; };
+		49E4791726736A6D00DD76AD /* RepoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsView.swift; sourceTree = "<group>"; };
 		CB84B4BA7B1320EDACCD16C0 /* Pods-Github-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Clone.release.xcconfig"; path = "Target Support Files/Pods-Github-Clone/Pods-Github-Clone.release.xcconfig"; sourceTree = "<group>"; };
 		F414FC6A15FBA7A0D7DA2BD9 /* Pods-Github-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Github-Clone/Pods-Github-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -162,12 +172,13 @@
 		4905F36E26725E2E006D51CC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				4905F36F26725E3D006D51CC /* GitHub Repos */,
+				49E4790C267366D100DD76AD /* GitHubRepoDetails */,
+				4905F36F26725E3D006D51CC /* GitHubRepos */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
 		};
-		4905F36F26725E3D006D51CC /* GitHub Repos */ = {
+		4905F36F26725E3D006D51CC /* GitHubRepos */ = {
 			isa = PBXGroup;
 			children = (
 				4930D18C2672A4FD00ACB64F /* ReposRouter.swift */,
@@ -176,7 +187,7 @@
 				4905F37126725E4E006D51CC /* View */,
 				4905F37026725E48006D51CC /* Model */,
 			);
-			path = "GitHub Repos";
+			path = GitHubRepos;
 			sourceTree = "<group>";
 		};
 		4905F37026725E48006D51CC /* Model */ = {
@@ -332,6 +343,34 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		49E4790C267366D100DD76AD /* GitHubRepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				49E47912267369F800DD76AD /* RepoDetailsRouter.swift */,
+				49E4791426736A2000DD76AD /* Presenter */,
+				49E4790D2673670700DD76AD /* View */,
+			);
+			path = GitHubRepoDetails;
+			sourceTree = "<group>";
+		};
+		49E4790D2673670700DD76AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				49E4790E2673688400DD76AD /* RepoDetailsVC.swift */,
+				49E479102673689E00DD76AD /* RepoDetailsView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		49E4791426736A2000DD76AD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				49E4791526736A6100DD76AD /* RepoDetailsPresenter.swift */,
+				49E4791726736A6D00DD76AD /* RepoDetailsView.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		BEF27384F882D56EDA01750B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +442,7 @@
 			files = (
 				49307E4D26724FA800039E62 /* LaunchScreen.storyboard in Resources */,
 				4945E8E026726B0700BF769F /* ListTableViewCell.xib in Resources */,
+				49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */,
 				4905F37826726819006D51CC /* GitHubListView.storyboard in Resources */,
 				49307E4A26724FA800039E62 /* Assets.xcassets in Resources */,
 			);
@@ -462,6 +502,7 @@
 				49C10442267290560007436A /* ParameterEncoding.swift in Sources */,
 				4930D18426729CC800ACB64F /* RepositoriesModel.swift in Sources */,
 				4930D18826729FAF00ACB64F /* RepoView.swift in Sources */,
+				49E47913267369F800DD76AD /* RepoDetailsRouter.swift in Sources */,
 				4930D18626729F3000ACB64F /* ReposPresenter.swift in Sources */,
 				49C104482672909F0007436A /* NetworkRouter.swift in Sources */,
 				4945E8F92672702200BF769F /* RootRouter.swift in Sources */,
@@ -473,6 +514,8 @@
 				4945E8F126726F6B00BF769F /* RootWireFrame.swift in Sources */,
 				4945E8F526726FB600BF769F /* Indicatable_Ext.swift in Sources */,
 				491DAEE02672D28A0023DCB7 /* RealmService.swift in Sources */,
+				49E4791626736A6100DD76AD /* RepoDetailsPresenter.swift in Sources */,
+				49E4790F2673688400DD76AD /* RepoDetailsVC.swift in Sources */,
 				49C10450267290F60007436A /* EndPointType.swift in Sources */,
 				4945E8E526726C4800BF769F /* GitHubListVC+TableView.swift in Sources */,
 				49C1044E267290E40007436A /* Router.swift in Sources */,
@@ -485,6 +528,7 @@
 				4945E8F726726FEE00BF769F /* Alertable_Ext.swift in Sources */,
 				4905F37426725E7E006D51CC /* GitHubListVC.swift in Sources */,
 				49C104402672903D0007436A /* NetworkResponseMessages.swift in Sources */,
+				49E4791826736A6D00DD76AD /* RepoDetailsView.swift in Sources */,
 				4945E8E226726BE500BF769F /* CardView.swift in Sources */,
 				4945E8DF26726B0700BF769F /* ListTableViewCell.swift in Sources */,
 				4945E8EB26726F2100BF769F /* ViewProtocols.swift in Sources */,

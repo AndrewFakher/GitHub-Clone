@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repo DetailsVC-->
+        <scene sceneID="aEl-lU-8eR">
+            <objects>
+                <viewController id="uy8-hB-3lz" customClass="RepoDetailsVC" customModule="Github_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gxk-d4-rfm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vF7-bQ-kwF">
+                                <rect key="frame" x="142" y="84" width="130" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="7I7-Ki-SB5"/>
+                                    <constraint firstAttribute="width" constant="130" id="ih2-A8-dZr"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="G7B-Bf-gJr">
+                                <rect key="frame" x="24" y="230" width="366" height="71"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repo Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3F-gq-5Hn">
+                                        <rect key="frame" x="127" y="0.0" width="112.5" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="Kailasa-Bold" family="Kailasa" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFk-7s-CZb">
+                                        <rect key="frame" x="137.5" y="35.5" width="91.5" height="35.5"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="22"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1C-09-eXh">
+                                <rect key="frame" x="72.5" y="345" width="269" height="45"/>
+                                <color key="backgroundColor" red="0.1137254902" green="0.25490196079999999" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="8It-jc-ggV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="Repo Link">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="G7B-Bf-gJr" firstAttribute="top" secondItem="vF7-bQ-kwF" secondAttribute="bottom" constant="16" id="0qC-wO-C6y"/>
+                            <constraint firstItem="G7B-Bf-gJr" firstAttribute="leading" secondItem="gzM-pA-CrG" secondAttribute="leading" constant="24" id="Fd4-IY-31S"/>
+                            <constraint firstItem="J1C-09-eXh" firstAttribute="top" secondItem="G7B-Bf-gJr" secondAttribute="bottom" constant="44" id="N2A-4Y-kg2"/>
+                            <constraint firstItem="gzM-pA-CrG" firstAttribute="trailing" secondItem="G7B-Bf-gJr" secondAttribute="trailing" constant="24" id="OPa-bi-PTh"/>
+                            <constraint firstItem="J1C-09-eXh" firstAttribute="width" secondItem="Gxk-d4-rfm" secondAttribute="width" multiplier="0.65" id="QgM-8r-UfQ"/>
+                            <constraint firstItem="vF7-bQ-kwF" firstAttribute="centerX" secondItem="Gxk-d4-rfm" secondAttribute="centerX" id="V33-ci-QNf"/>
+                            <constraint firstItem="J1C-09-eXh" firstAttribute="centerX" secondItem="Gxk-d4-rfm" secondAttribute="centerX" id="Z4d-Ev-QZA"/>
+                            <constraint firstItem="G7B-Bf-gJr" firstAttribute="centerX" secondItem="Gxk-d4-rfm" secondAttribute="centerX" id="f0A-AJ-3rw"/>
+                            <constraint firstItem="vF7-bQ-kwF" firstAttribute="top" secondItem="gzM-pA-CrG" secondAttribute="top" constant="40" id="o42-2T-UJI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gzM-pA-CrG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQq-y0-YZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.637681159420293" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>

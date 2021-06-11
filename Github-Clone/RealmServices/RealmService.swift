@@ -13,7 +13,6 @@ class RealmService {
 
     static var shared = RealmService()
     private var realm: Realm?
-    var offset = 0
 
     init() {
         do { realm = try Realm() } catch { }
