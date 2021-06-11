@@ -26,5 +26,8 @@ extension GitHubListVC: UITableViewDataSource, UITableViewDelegate{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.navigateToRepoDetails(for: indexPath.row)
+    }
     
 }

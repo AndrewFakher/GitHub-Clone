@@ -36,7 +36,7 @@ class RepoDetailsPresenter {
     }
     
     func setRepoLink(){
-         let repoLink = repoDetails.url
+         let repoLink = repoDetails.html_url
         self.view?.setRepoLink(repoLink: repoLink)
     }
 }

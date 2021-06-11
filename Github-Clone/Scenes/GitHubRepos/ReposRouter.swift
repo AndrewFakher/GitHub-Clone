@@ -21,4 +21,10 @@ class ReposRouter: RepoRouterProtocol{
         return UIStoryboard(name:"GitHubListView",bundle: Bundle.main)
     }
     
+    func goToRepoDetails(from view: RepoView?, repo: RepoModel) {
+        let repoDetailsView = RepoDetailsRouter.assembleRepoDetailshModule(repo: repo)
+        if let viewController = view as? UIViewController {
+            viewController.present(repoDetailsView, animated: true, completion: nil)
+        }
+    }
 }

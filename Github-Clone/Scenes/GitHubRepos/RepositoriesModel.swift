@@ -14,7 +14,7 @@ class RepoModel:Object, Codable {
     @objc dynamic var name: String = ""
     @objc dynamic var full_name: String = ""
     @objc dynamic var owner: OwnerModel?
-    @objc dynamic var url: String = ""
+    @objc dynamic var html_url: String = ""
 
     override class func primaryKey() -> String? {
         return "id"

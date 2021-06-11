@@ -72,8 +72,13 @@ class ReposPresenter{
         let title = repo.name
         let repoOwner = repo.owner?.login
         let userProfile = repo.owner?.avatar_url
-        let repoURL = repo.url
+        let repoURL = repo.html_url
         
         cell.displayCellData(repoName: title , repoOwner: repoOwner ?? "", repoProfile: userProfile ?? "", repoURL: repoURL)
+    }
+    
+    func navigateToRepoDetails(for index: Int){
+        let repo = repos[index]
+        router.goToRepoDetails(from: view, repo: repo)
     }
 }
