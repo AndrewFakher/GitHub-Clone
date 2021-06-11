@@ -24,15 +24,19 @@ class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
         backgroundView.backgroundColor = UIColor.clear
         self.selectedBackgroundView = backgroundView
     }
+    
+    override func prepareForReuse() {
+        UserImg.image = nil
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    func displayCellData(repoName: String, repoOwner: String, repoProfile: String, repoDate: String) {
+    func displayCellData(repoName: String, repoOwner: String, repoProfile: String, repoURL: String) {
         self.userNameLabel.text = repoOwner
         self.repoNameLabel.text = repoName
-        self.creationDateLabel.text = repoDate
+        self.creationDateLabel.text = repoURL
         self.setProfilePic(imgLink: repoProfile)
     }
     

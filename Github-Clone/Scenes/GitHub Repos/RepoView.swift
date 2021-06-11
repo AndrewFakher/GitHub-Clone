@@ -20,7 +20,7 @@ protocol RepoView: Alertable, Indicatable {
 }
 
 protocol RepoCellView {
-    func displayCellData(repoName: String, repoOwner: String, repoProfile: String, repoDate: String)
+    func displayCellData(repoName: String, repoOwner: String, repoProfile: String, repoURL: String)
 }
 
 protocol RepoRouterProtocol: class {

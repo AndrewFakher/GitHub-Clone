@@ -7,34 +7,64 @@
 //
 
 import Foundation
+import RealmSwift
+
 class ReposListRepository: NetworkResponsable {
     let router = Router<GitHubApi>()
+    private let realm: RealmService
     
-    func getAllRepos(completion: @escaping (_ repos: [RepoModel]?,_ error: String?)->()){
+    init(realm: RealmService = RealmService.shared) {
+        self.realm = realm
+    }
+
+    func getAllRepos(completion: @escaping (_ repos: List<RepoModel>?,_ error: String?)->()){
         router.request(.reposList) { data, response, error in
             if error != nil {
-                completion([],"Please check your network connection.")
+                completion(nil,"Please check your network connection.")
+                self.getReposFromCach { repos in
+                    completion(repos,nil)
+                }
             }
             if let response = response as? HTTPURLResponse {
                 let result = self.handleNetworkResponse(response)
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion([], NetworkResponse.noData.rawValue)
+                        completion(nil, NetworkResponse.noData.rawValue)
                         return
                     }
                     do {
-                        let apiResponse = try JSONDecoder().decode([RepoModel].self, from: responseData)
+                        let apiResponse = try JSONDecoder().decode(List<RepoModel>.self, from: responseData)
+                        DispatchQueue.main.async {
+                            self.realm.setDataForRepos(repos: apiResponse)
+                        }
                         completion(apiResponse,nil)
                     }catch {
                         print(error)
-                        completion([], NetworkResponse.unableToDecode.rawValue)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
                     }
                 case .failure:
-                    completion([], NetworkResponse.unKnown.rawValue)
+                    completion(nil, NetworkResponse.unKnown.rawValue)
                 }
             }
         }
     }
+    
+    func getReposFromCach(completion: @escaping (_ repos: List<RepoModel>?)->()){
+        DispatchQueue.main.async {
+            self.realm.getReposFromCach { repos in
+                completion(repos)
+            }
+        }
+    }
+    
+    func getSearchedReposFromCach(repoName: String, completion: @escaping (_ repos: List<RepoModel>?)->()){
+        DispatchQueue.main.async {
+            self.realm.searchFromCach(repoName: repoName) { repos in
+                completion(repos)
+            }
+        }
+    }
+    
     
 }

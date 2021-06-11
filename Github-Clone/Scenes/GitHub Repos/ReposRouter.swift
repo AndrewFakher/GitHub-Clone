@@ -12,13 +12,13 @@ class ReposRouter: RepoRouterProtocol{
     weak var viewController: UIViewController!
 
     static func assembleRepohModule() -> UIViewController {
-        let controller = mainstoryboard.instantiateViewController(withIdentifier: "SearchVC")
+        let controller = mainstoryboard.instantiateViewController(withIdentifier: "GitHubListView")
         let navigation = UINavigationController(rootViewController: controller)
         return navigation
     }
     
     private static var mainstoryboard: UIStoryboard{
-        return UIStoryboard(name:"Search",bundle: Bundle.main)
+        return UIStoryboard(name:"GitHubListView",bundle: Bundle.main)
     }
     
 }

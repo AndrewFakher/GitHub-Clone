@@ -7,17 +7,22 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct RepoModel: Codable {
-    var id: Int?
-    var name: String?
-    var full_name: String?
-    var owner: OwnerModel?
-    var description: String?
+class RepoModel:Object, Codable {
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var full_name: String = ""
+    @objc dynamic var owner: OwnerModel?
+    @objc dynamic var url: String = ""
+
+    override class func primaryKey() -> String? {
+        return "id"
+    }
 }
 
-struct OwnerModel: Codable {
-    var login: String?
-    var id: Int?
-    var avatar_url: String?
+class OwnerModel:Object, Codable {
+    @objc dynamic var login: String = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var avatar_url: String = ""
 }

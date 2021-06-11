@@ -11,14 +11,14 @@ import UIKit
 
 //MARK: Root Router
 
-//class RootRouter: RootWireframe {
-//    var rootViewController: UIViewController!
-//
-//    func presentRootScreen(in window: UIWindow) {
-//        window.makeKeyAndVisible()
-//        var rootViewController: UIViewController!
-//        rootViewController = SearchRouter.assembleSearchModule()
-//        window.rootViewController = rootViewController
-//
-//    }
-//}
+class RootRouter: RootWireframe {
+    var rootViewController: UIViewController!
+    
+    func presentRootScreen(in window: UIWindow) {
+        window.makeKeyAndVisible()
+        var rootViewController: UIViewController!
+        rootViewController = ReposRouter.assembleRepohModule()
+        window.rootViewController = rootViewController
+        
+    }
+}

@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4905F37426725E7E006D51CC /* GitHubListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4905F37326725E7E006D51CC /* GitHubListVC.swift */; };
 		4905F37826726819006D51CC /* GitHubListView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4905F37726726819006D51CC /* GitHubListView.storyboard */; };
+		491DAEE02672D28A0023DCB7 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491DAEDF2672D28A0023DCB7 /* RealmService.swift */; };
 		49307E4126724FA500039E62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49307E4026724FA500039E62 /* AppDelegate.swift */; };
 		49307E4A26724FA800039E62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49307E4926724FA800039E62 /* Assets.xcassets */; };
 		49307E4D26724FA800039E62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49307E4B26724FA800039E62 /* LaunchScreen.storyboard */; };
@@ -42,11 +43,14 @@
 		49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044B267290CE0007436A /* HTTPMethod.swift */; };
 		49C1044E267290E40007436A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044D267290E40007436A /* Router.swift */; };
 		49C10450267290F60007436A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044F267290F60007436A /* EndPointType.swift */; };
+		4A90CA75416BC7686821C03C /* Pods_Github_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4905F37326725E7E006D51CC /* GitHubListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubListVC.swift; sourceTree = "<group>"; };
 		4905F37726726819006D51CC /* GitHubListView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GitHubListView.storyboard; sourceTree = "<group>"; };
+		491DAEDF2672D28A0023DCB7 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		49307E3D26724FA500039E62 /* Github-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Github-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49307E4026724FA500039E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49307E4926724FA800039E62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 		49C1044B267290CE0007436A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		49C1044D267290E40007436A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		49C1044F267290F60007436A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		CB84B4BA7B1320EDACCD16C0 /* Pods-Github-Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Clone.release.xcconfig"; path = "Target Support Files/Pods-Github-Clone/Pods-Github-Clone.release.xcconfig"; sourceTree = "<group>"; };
+		F414FC6A15FBA7A0D7DA2BD9 /* Pods-Github-Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Github-Clone.debug.xcconfig"; path = "Target Support Files/Pods-Github-Clone/Pods-Github-Clone.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +95,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A90CA75416BC7686821C03C /* Pods_Github_Clone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44DF4CA62B328EA4FF910242 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4905F36926725DD5006D51CC /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +170,11 @@
 		4905F36F26725E3D006D51CC /* GitHub Repos */ = {
 			isa = PBXGroup;
 			children = (
+				4930D18C2672A4FD00ACB64F /* ReposRouter.swift */,
 				4930D1892672A33900ACB64F /* Repository */,
 				4905F37226725E53006D51CC /* Presenter */,
 				4905F37126725E4E006D51CC /* View */,
 				4905F37026725E48006D51CC /* Model */,
-				4930D18C2672A4FD00ACB64F /* ReposRouter.swift */,
 			);
 			path = "GitHub Repos";
 			sourceTree = "<group>";
@@ -190,11 +205,21 @@
 			name = Presenter;
 			sourceTree = "<group>";
 		};
+		491DAEDE2672D2680023DCB7 /* RealmServices */ = {
+			isa = PBXGroup;
+			children = (
+				491DAEDF2672D28A0023DCB7 /* RealmService.swift */,
+			);
+			path = RealmServices;
+			sourceTree = "<group>";
+		};
 		49307E3426724FA500039E62 = {
 			isa = PBXGroup;
 			children = (
 				49307E3F26724FA500039E62 /* Github-Clone */,
 				49307E3E26724FA500039E62 /* Products */,
+				BEF27384F882D56EDA01750B /* Pods */,
+				44DF4CA62B328EA4FF910242 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -209,6 +234,7 @@
 		49307E3F26724FA500039E62 /* Github-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				491DAEDE2672D2680023DCB7 /* RealmServices */,
 				4905F36D26725E24006D51CC /* CustomLayout */,
 				4905F36C26725E17006D51CC /* Helper */,
 				4905F36B26725E12006D51CC /* Extensions */,
@@ -306,6 +332,15 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		BEF27384F882D56EDA01750B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F414FC6A15FBA7A0D7DA2BD9 /* Pods-Github-Clone.debug.xcconfig */,
+				CB84B4BA7B1320EDACCD16C0 /* Pods-Github-Clone.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -313,9 +348,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49307E5126724FA800039E62 /* Build configuration list for PBXNativeTarget "Github-Clone" */;
 			buildPhases = (
+				A82CF785BA6250E8A6C09689 /* [CP] Check Pods Manifest.lock */,
 				49307E3926724FA500039E62 /* Sources */,
 				49307E3A26724FA500039E62 /* Frameworks */,
 				49307E3B26724FA500039E62 /* Resources */,
+				CA7F1B2658E2342FF837C475 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -373,6 +410,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A82CF785BA6250E8A6C09689 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Github-Clone-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA7F1B2658E2342FF837C475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Github-Clone/Pods-Github-Clone-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Github-Clone/Pods-Github-Clone-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Github-Clone/Pods-Github-Clone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		49307E3926724FA500039E62 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -393,6 +472,7 @@
 				49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */,
 				4945E8F126726F6B00BF769F /* RootWireFrame.swift in Sources */,
 				4945E8F526726FB600BF769F /* Indicatable_Ext.swift in Sources */,
+				491DAEE02672D28A0023DCB7 /* RealmService.swift in Sources */,
 				49C10450267290F60007436A /* EndPointType.swift in Sources */,
 				4945E8E526726C4800BF769F /* GitHubListVC+TableView.swift in Sources */,
 				49C1044E267290E40007436A /* Router.swift in Sources */,
@@ -542,6 +622,7 @@
 		};
 		49307E5226724FA800039E62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F414FC6A15FBA7A0D7DA2BD9 /* Pods-Github-Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -560,6 +641,7 @@
 		};
 		49307E5326724FA800039E62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB84B4BA7B1320EDACCD16C0 /* Pods-Github-Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

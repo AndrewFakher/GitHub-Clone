@@ -7,14 +7,14 @@
 //
 
 import Foundation
-
+import RealmSwift
 class ReposPresenter{
     
     private weak var view: RepoView?
     private let repository = ReposListRepository()
     private let router = ReposRouter()
 
-    private var repos = [RepoModel]()
+    private var repos = List<RepoModel>()
     
     private var from = 1
     private var to = 1
@@ -36,6 +36,17 @@ class ReposPresenter{
             }
             if let error = error{
                 self.view?.showError(error: error)
+            }
+        }
+    }
+    
+    func getSearchedReposFromCach(repoName: String){
+        repository.getSearchedReposFromCach(repoName: repoName) { (repos) in
+            if let repos = repos {
+                self.repos = repos
+                self.view?.fetchingReposSuccess()
+            }else{
+                self.view?.showError(error: "No Repositories Founded!")
             }
         }
     }
@@ -65,8 +76,8 @@ class ReposPresenter{
         let title = repo.name
         let repoOwner = repo.owner?.login
         let userProfile = repo.owner?.avatar_url
-        let repodDesc = repo.description
+        let repoURL = repo.url
         
-        cell.displayCellData(repoName: title ?? "", repoOwner: repoOwner ?? "", repoProfile: userProfile ?? "", repoDate: repodDesc ?? "")
+        cell.displayCellData(repoName: title , repoOwner: repoOwner ?? "", repoProfile: userProfile ?? "", repoURL: repoURL)
     }
 }
