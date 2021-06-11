@@ -51,10 +51,6 @@ class ReposPresenter{
         }
     }
     
-    func getSearchedRepos(query:String){
-        
-    }
-    
     func loadMoreRecipes(query:String){
         view?.showIndicator()
     }

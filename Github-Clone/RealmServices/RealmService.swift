@@ -55,7 +55,7 @@ class RealmService {
     
     func searchFromCach(repoName: String, completion :@escaping (_ repos:List<RepoModel>) -> ()) {
         let realm = try! Realm()
-        let searchedRepos = realm.objects(RepoModel.self).filter("title contains[c] %@", repoName)
+        let searchedRepos = realm.objects(RepoModel.self).filter("name contains[c] %@", repoName)
         
         let cachedRepos = List<RepoModel>()
         for repo in searchedRepos{
