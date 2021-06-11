@@ -23,6 +23,7 @@ extension GitHubListVC: UISearchBarDelegate{
     }
 
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

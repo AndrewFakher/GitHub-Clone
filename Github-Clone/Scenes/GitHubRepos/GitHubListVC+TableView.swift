@@ -12,6 +12,7 @@ extension GitHubListVC: UITableViewDataSource, UITableViewDelegate{
     func setupTableView(){
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.keyboardDismissMode = .onDrag
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(ListTableViewCell.self)
     }
