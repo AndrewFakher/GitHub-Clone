@@ -43,6 +43,10 @@
 		49C1044C267290CE0007436A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044B267290CE0007436A /* HTTPMethod.swift */; };
 		49C1044E267290E40007436A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044D267290E40007436A /* Router.swift */; };
 		49C10450267290F60007436A /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1044F267290F60007436A /* EndPointType.swift */; };
+		49D1F5FE2674FF6F000A18F5 /* ReposPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F5FD2674FF6F000A18F5 /* ReposPresenterTest.swift */; };
+		49D1F600267501AD000A18F5 /* SearchRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */; };
+		49D1F602267501C9000A18F5 /* SearchWithoutRepoSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */; };
+		49D1F604267502A2000A18F5 /* SearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F603267502A2000A18F5 /* SearchViewSpy.swift */; };
 		49E4790F2673688400DD76AD /* RepoDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4790E2673688400DD76AD /* RepoDetailsVC.swift */; };
 		49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E479102673689E00DD76AD /* RepoDetailsView.storyboard */; };
 		49E47913267369F800DD76AD /* RepoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E47912267369F800DD76AD /* RepoDetailsRouter.swift */; };
@@ -50,6 +54,16 @@
 		49E4791826736A6D00DD76AD /* RepoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4791726736A6D00DD76AD /* RepoDetailsView.swift */; };
 		4A90CA75416BC7686821C03C /* Pods_Github_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		49D1F5F82674FCC9000A18F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49307E3526724FA500039E62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49307E3C26724FA500039E62;
+			remoteInfo = "Github-Clone";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		055C0F7758C458A0E43D1809 /* Pods_Github_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Github_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +105,12 @@
 		49C1044B267290CE0007436A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		49C1044D267290E40007436A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		49C1044F267290F60007436A /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		49D1F5F32674FCC9000A18F5 /* Github-CloneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Github-CloneTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49D1F5F72674FCC9000A18F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49D1F5FD2674FF6F000A18F5 /* ReposPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposPresenterTest.swift; sourceTree = "<group>"; };
+		49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositorySpy.swift; sourceTree = "<group>"; };
+		49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWithoutRepoSpy.swift; sourceTree = "<group>"; };
+		49D1F603267502A2000A18F5 /* SearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewSpy.swift; sourceTree = "<group>"; };
 		49E4790E2673688400DD76AD /* RepoDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsVC.swift; sourceTree = "<group>"; };
 		49E479102673689E00DD76AD /* RepoDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoDetailsView.storyboard; sourceTree = "<group>"; };
 		49E47912267369F800DD76AD /* RepoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsRouter.swift; sourceTree = "<group>"; };
@@ -106,6 +126,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A90CA75416BC7686821C03C /* Pods_Github_Clone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D1F5F02674FCC9000A18F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				49307E3F26724FA500039E62 /* Github-Clone */,
+				49D1F5F42674FCC9000A18F5 /* Github-CloneTests */,
 				49307E3E26724FA500039E62 /* Products */,
 				BEF27384F882D56EDA01750B /* Pods */,
 				44DF4CA62B328EA4FF910242 /* Frameworks */,
@@ -238,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				49307E3D26724FA500039E62 /* Github-Clone.app */,
+				49D1F5F32674FCC9000A18F5 /* Github-CloneTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -343,6 +372,18 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		49D1F5F42674FCC9000A18F5 /* Github-CloneTests */ = {
+			isa = PBXGroup;
+			children = (
+				49D1F5FD2674FF6F000A18F5 /* ReposPresenterTest.swift */,
+				49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */,
+				49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */,
+				49D1F603267502A2000A18F5 /* SearchViewSpy.swift */,
+				49D1F5F72674FCC9000A18F5 /* Info.plist */,
+			);
+			path = "Github-CloneTests";
+			sourceTree = "<group>";
+		};
 		49E4790C267366D100DD76AD /* GitHubRepoDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +443,24 @@
 			productReference = 49307E3D26724FA500039E62 /* Github-Clone.app */;
 			productType = "com.apple.product-type.application";
 		};
+		49D1F5F22674FCC9000A18F5 /* Github-CloneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49D1F5FC2674FCC9000A18F5 /* Build configuration list for PBXNativeTarget "Github-CloneTests" */;
+			buildPhases = (
+				49D1F5EF2674FCC9000A18F5 /* Sources */,
+				49D1F5F02674FCC9000A18F5 /* Frameworks */,
+				49D1F5F12674FCC9000A18F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				49D1F5F92674FCC9000A18F5 /* PBXTargetDependency */,
+			);
+			name = "Github-CloneTests";
+			productName = "Github-CloneTests";
+			productReference = 49D1F5F32674FCC9000A18F5 /* Github-CloneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -414,6 +473,10 @@
 				TargetAttributes = {
 					49307E3C26724FA500039E62 = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					49D1F5F22674FCC9000A18F5 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 49307E3C26724FA500039E62;
 					};
 				};
 			};
@@ -431,6 +494,7 @@
 			projectRoot = "";
 			targets = (
 				49307E3C26724FA500039E62 /* Github-Clone */,
+				49D1F5F22674FCC9000A18F5 /* Github-CloneTests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,6 +509,13 @@
 				49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */,
 				4905F37826726819006D51CC /* GitHubListView.storyboard in Resources */,
 				49307E4A26724FA800039E62 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D1F5F12674FCC9000A18F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,7 +607,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49D1F5EF2674FCC9000A18F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49D1F600267501AD000A18F5 /* SearchRepositorySpy.swift in Sources */,
+				49D1F602267501C9000A18F5 /* SearchWithoutRepoSpy.swift in Sources */,
+				49D1F5FE2674FF6F000A18F5 /* ReposPresenterTest.swift in Sources */,
+				49D1F604267502A2000A18F5 /* SearchViewSpy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		49D1F5F92674FCC9000A18F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49307E3C26724FA500039E62 /* Github-Clone */;
+			targetProxy = 49D1F5F82674FCC9000A18F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		49307E4B26724FA800039E62 /* LaunchScreen.storyboard */ = {
@@ -702,6 +792,46 @@
 			};
 			name = Release;
 		};
+		49D1F5FA2674FCC9000A18F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8CQRWZD84;
+				INFOPLIST_FILE = "Github-CloneTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-.Github-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github-Clone.app/Github-Clone";
+			};
+			name = Debug;
+		};
+		49D1F5FB2674FCC9000A18F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K8CQRWZD84;
+				INFOPLIST_FILE = "Github-CloneTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.-.Github-CloneTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Github-Clone.app/Github-Clone";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -719,6 +849,15 @@
 			buildConfigurations = (
 				49307E5226724FA800039E62 /* Debug */,
 				49307E5326724FA800039E62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49D1F5FC2674FCC9000A18F5 /* Build configuration list for PBXNativeTarget "Github-CloneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49D1F5FA2674FCC9000A18F5 /* Debug */,
+				49D1F5FB2674FCC9000A18F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

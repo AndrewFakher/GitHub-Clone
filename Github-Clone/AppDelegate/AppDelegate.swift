@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+//MARK: Realm Migration
+
 extension AppDelegate{
     public static func realmMigration() {
         let currentSchemaVersion: UInt64 = 1

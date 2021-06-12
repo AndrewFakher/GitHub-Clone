@@ -9,6 +9,7 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
+    
     @IBOutlet weak var creationDateLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var repoNameLabel: UILabel!

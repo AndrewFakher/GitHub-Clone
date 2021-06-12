@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//MARK: Realm Services
+
 class RealmService {
 
     static var shared = RealmService()
@@ -18,6 +20,8 @@ class RealmService {
         do { realm = try Realm() } catch { }
     }
     
+    //MARK: Caching Repo
+
     func setDataForRepos(repos:List<RepoModel>)
     {
         let realm = try! Realm()
@@ -32,6 +36,8 @@ class RealmService {
         }
     }
     
+    //MARK: Clearing Data from Realm
+    
     func clearDataFromCach(repos:List<RepoModel>)
     {
         let realm = try! Realm()
@@ -42,6 +48,8 @@ class RealmService {
         }
     }
     
+    //MARK: get Repos from cach
+
     func getReposFromCach( completion :@escaping (_ repos:List<RepoModel>) -> ()) {
         let realm = try! Realm()
         let repos = realm.objects(RepoModel.self).sorted(byKeyPath: "id", ascending: true)
@@ -52,6 +60,8 @@ class RealmService {
         completion(cachedRepos)
     }
     
+    //MARK: Searching Repo from cach
+
     func searchFromCach(repoName: String, completion :@escaping (_ repos:List<RepoModel>) -> ()) {
         let realm = try! Realm()
         let searchedRepos = realm.objects(RepoModel.self).filter("name contains[c] %@", repoName)

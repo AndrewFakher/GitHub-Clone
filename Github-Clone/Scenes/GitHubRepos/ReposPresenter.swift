@@ -20,6 +20,8 @@ class ReposPresenter{
         self.view = view
     }
     
+    //MARK: get all repos request
+
     func getRepos(){
         view?.showIndicator()
         repository.getAllRepos { repos, error in
@@ -34,6 +36,8 @@ class ReposPresenter{
         }
     }
     
+    //MARK: Search a repo from cach
+    
     func getSearchedReposFromCach(repoName: String){
         repository.getSearchedReposFromCach(repoName: repoName) { (repos) in
             if let repos = repos {
@@ -45,9 +49,6 @@ class ReposPresenter{
         }
     }
     
-    func loadMoreRecipes(query:String){
-        view?.showIndicator()
-    }
     
     func getReposCount() -> Int {
          return repos.count
@@ -61,6 +62,8 @@ class ReposPresenter{
          self.view?.showAlert(message: msg)
      }
 
+    //MARK: configure repo cell
+
     func configure(cell: ListTableViewCell, for index: Int) {
         let repo = repos[index]
         let title = repo.name
@@ -70,7 +73,8 @@ class ReposPresenter{
         
         cell.displayCellData(repoName: title , repoOwner: repoOwner ?? "", repoProfile: userProfile ?? "", repoURL: repoURL)
     }
-    
+    //MARK: Navigate to Repo Details screen
+
     func navigateToRepoDetails(for index: Int){
         let repo = repos[index]
         router.goToRepoDetails(from: view, repo: repo)

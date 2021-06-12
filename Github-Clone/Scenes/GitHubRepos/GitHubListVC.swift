@@ -13,7 +13,6 @@ class GitHubListVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var presenter: ReposPresenter!
-
     lazy var searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 50))
     
     override func viewDidLoad() {
@@ -47,7 +46,7 @@ extension GitHubListVC: RepoView{
     }
     
     func noReposFoundedView() {
-        
+        print("No Repos Founded")
     }
     
     func handlingSearchBarText(searchBarText: String) {

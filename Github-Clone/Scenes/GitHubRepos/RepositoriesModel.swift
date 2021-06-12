@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//MARK: Repo Model
+
 class RepoModel:Object, Codable {
     @objc dynamic var id: Int = 0
     @objc dynamic var name: String = ""

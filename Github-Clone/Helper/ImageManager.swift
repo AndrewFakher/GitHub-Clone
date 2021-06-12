@@ -8,6 +8,8 @@
 
 import UIKit
 
+//MARK: Helper Extension for caching image
+
 extension UIImageView {
     func load(url: URL,cache: URLCache? = nil) {
         let cache = cache ?? URLCache.shared

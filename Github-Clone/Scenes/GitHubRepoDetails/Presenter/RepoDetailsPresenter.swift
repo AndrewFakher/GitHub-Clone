@@ -20,6 +20,8 @@ class RepoDetailsPresenter {
     }
     
 
+    //MARK: Set Repo Details Data
+
     func setUserImage(){
         guard let userImage = repoDetails.owner?.avatar_url else {return}
         self.view?.setUserImage(imageLink: userImage)

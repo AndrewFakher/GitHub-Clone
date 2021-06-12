@@ -9,6 +9,8 @@
 import Foundation
 import RealmSwift
 
+//MARK: Repos Network Services
+
 class ReposListRepository: NetworkResponsable {
     let router = Router<GitHubApi>()
     private let realm: RealmService
@@ -16,6 +18,8 @@ class ReposListRepository: NetworkResponsable {
     init(realm: RealmService = RealmService.shared) {
         self.realm = realm
     }
+
+    //MARK: get all repos
 
     func getAllRepos(completion: @escaping (_ repos: List<RepoModel>?,_ error: String?)->()){
         router.request(.reposList) { data, response, error in
@@ -50,6 +54,8 @@ class ReposListRepository: NetworkResponsable {
         }
     }
     
+    //MARK: get repos from cach
+
     func getReposFromCach(completion: @escaping (_ repos: List<RepoModel>?)->()){
         DispatchQueue.main.async {
             self.realm.getReposFromCach { repos in
@@ -58,6 +64,8 @@ class ReposListRepository: NetworkResponsable {
         }
     }
     
+    //MARK: search repo from cach
+
     func getSearchedReposFromCach(repoName: String, completion: @escaping (_ repos: List<RepoModel>?)->()){
         DispatchQueue.main.async {
             self.realm.searchFromCach(repoName: repoName) { repos in

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+//MARK: Repo Details View Protocols
+
 protocol RepoDetailsView: class {
     var presenter: RepoDetailsPresenter? { get set }
     func setUserImage(imageLink: String)

@@ -8,6 +8,8 @@
 
 import UIKit
 
+//MARK: Card ciew custom layout
+
 @IBDesignable
 class CardView: UIView {
 
