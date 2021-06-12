@@ -18,12 +18,17 @@ class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
             UserImg.layer.cornerRadius = UserImg.frame.size.width / 2
         }
     }
+    let today = Date()
+    let formatter = DateFormatter()
+
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.clear
         self.selectedBackgroundView = backgroundView
+        formatter.dateStyle = .long
     }
     
     override func prepareForReuse() {
@@ -37,7 +42,7 @@ class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
     func displayCellData(repoName: String, repoOwner: String, repoProfile: String, repoURL: String) {
         self.userNameLabel.text = repoOwner
         self.repoNameLabel.text = repoName
-        self.creationDateLabel.text = repoURL
+        self.creationDateLabel.text = formatter.string(from: today)
         self.setProfilePic(imgLink: repoProfile)
     }
     

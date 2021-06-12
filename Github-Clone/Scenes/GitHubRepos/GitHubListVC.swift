@@ -23,7 +23,6 @@ class GitHubListVC: UIViewController {
         presenter = ReposPresenter(view: self)
         presenter.getRepos()
     }
-    
 }
 
 extension GitHubListVC: RepoView{

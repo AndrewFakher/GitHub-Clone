@@ -32,6 +32,9 @@
 		4945E8F526726FB600BF769F /* Indicatable_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8F426726FB600BF769F /* Indicatable_Ext.swift */; };
 		4945E8F726726FEE00BF769F /* Alertable_Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8F626726FEE00BF769F /* Alertable_Ext.swift */; };
 		4945E8F92672702200BF769F /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4945E8F82672702200BF769F /* RootRouter.swift */; };
+		4981047026754DE900B2C789 /* repo-screen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4981046D26754DE900B2C789 /* repo-screen.png */; };
+		4981047126754DE900B2C789 /* repo-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 4981046E26754DE900B2C789 /* repo-search.png */; };
+		4981047226754DE900B2C789 /* repo-details.png in Resources */ = {isa = PBXBuildFile; fileRef = 4981046F26754DE900B2C789 /* repo-details.png */; };
 		49C1043C26728F970007436A /* GitHubEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043B26728F970007436A /* GitHubEndPoint.swift */; };
 		49C1043E267290280007436A /* NetworkResponsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043D267290280007436A /* NetworkResponsable.swift */; };
 		49C104402672903D0007436A /* NetworkResponseMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1043F2672903D0007436A /* NetworkResponseMessages.swift */; };
@@ -47,7 +50,6 @@
 		49D1F600267501AD000A18F5 /* SearchRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */; };
 		49D1F602267501C9000A18F5 /* SearchWithoutRepoSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */; };
 		49D1F604267502A2000A18F5 /* SearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F603267502A2000A18F5 /* SearchViewSpy.swift */; };
-		49D1F60626751432000A18F5 /* SearchRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D1F60526751432000A18F5 /* SearchRepositoryTest.swift */; };
 		49E4790F2673688400DD76AD /* RepoDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E4790E2673688400DD76AD /* RepoDetailsVC.swift */; };
 		49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49E479102673689E00DD76AD /* RepoDetailsView.storyboard */; };
 		49E47913267369F800DD76AD /* RepoDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E47912267369F800DD76AD /* RepoDetailsRouter.swift */; };
@@ -95,6 +97,9 @@
 		4945E8F426726FB600BF769F /* Indicatable_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Indicatable_Ext.swift; sourceTree = "<group>"; };
 		4945E8F626726FEE00BF769F /* Alertable_Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable_Ext.swift; sourceTree = "<group>"; };
 		4945E8F82672702200BF769F /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		4981046D26754DE900B2C789 /* repo-screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "repo-screen.png"; sourceTree = "<group>"; };
+		4981046E26754DE900B2C789 /* repo-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "repo-search.png"; sourceTree = "<group>"; };
+		4981046F26754DE900B2C789 /* repo-details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "repo-details.png"; sourceTree = "<group>"; };
 		49C1043B26728F970007436A /* GitHubEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubEndPoint.swift; sourceTree = "<group>"; };
 		49C1043D267290280007436A /* NetworkResponsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponsable.swift; sourceTree = "<group>"; };
 		49C1043F2672903D0007436A /* NetworkResponseMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponseMessages.swift; sourceTree = "<group>"; };
@@ -112,7 +117,6 @@
 		49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositorySpy.swift; sourceTree = "<group>"; };
 		49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWithoutRepoSpy.swift; sourceTree = "<group>"; };
 		49D1F603267502A2000A18F5 /* SearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewSpy.swift; sourceTree = "<group>"; };
-		49D1F60526751432000A18F5 /* SearchRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRepositoryTest.swift; sourceTree = "<group>"; };
 		49E4790E2673688400DD76AD /* RepoDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsVC.swift; sourceTree = "<group>"; };
 		49E479102673689E00DD76AD /* RepoDetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepoDetailsView.storyboard; sourceTree = "<group>"; };
 		49E47912267369F800DD76AD /* RepoDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsRouter.swift; sourceTree = "<group>"; };
@@ -328,6 +332,9 @@
 		497D9B1726725D87000CB8B4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4981046F26754DE900B2C789 /* repo-details.png */,
+				4981046D26754DE900B2C789 /* repo-screen.png */,
+				4981046E26754DE900B2C789 /* repo-search.png */,
 				49307E4926724FA800039E62 /* Assets.xcassets */,
 				49307E4B26724FA800039E62 /* LaunchScreen.storyboard */,
 				49307E4E26724FA800039E62 /* Info.plist */,
@@ -381,7 +388,6 @@
 				49D1F5FF267501AD000A18F5 /* SearchRepositorySpy.swift */,
 				49D1F601267501C9000A18F5 /* SearchWithoutRepoSpy.swift */,
 				49D1F603267502A2000A18F5 /* SearchViewSpy.swift */,
-				49D1F60526751432000A18F5 /* SearchRepositoryTest.swift */,
 				49D1F5F72674FCC9000A18F5 /* Info.plist */,
 			);
 			path = "Github-CloneTests";
@@ -508,7 +514,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				49307E4D26724FA800039E62 /* LaunchScreen.storyboard in Resources */,
+				4981047026754DE900B2C789 /* repo-screen.png in Resources */,
 				4945E8E026726B0700BF769F /* ListTableViewCell.xib in Resources */,
+				4981047126754DE900B2C789 /* repo-search.png in Resources */,
+				4981047226754DE900B2C789 /* repo-details.png in Resources */,
 				49E479112673689E00DD76AD /* RepoDetailsView.storyboard in Resources */,
 				4905F37826726819006D51CC /* GitHubListView.storyboard in Resources */,
 				49307E4A26724FA800039E62 /* Assets.xcassets in Resources */,
@@ -615,7 +624,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D1F600267501AD000A18F5 /* SearchRepositorySpy.swift in Sources */,
-				49D1F60626751432000A18F5 /* SearchRepositoryTest.swift in Sources */,
 				49D1F602267501C9000A18F5 /* SearchWithoutRepoSpy.swift in Sources */,
 				49D1F5FE2674FF6F000A18F5 /* ReposPresenterTest.swift in Sources */,
 				49D1F604267502A2000A18F5 /* SearchViewSpy.swift in Sources */,
@@ -763,6 +771,7 @@
 			baseConfigurationReference = F414FC6A15FBA7A0D7DA2BD9 /* Pods-Github-Clone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8CQRWZD84;
 				INFOPLIST_FILE = "$(SRCROOT)/Github-Clone/Resources/Info.plist";
@@ -782,6 +791,7 @@
 			baseConfigurationReference = CB84B4BA7B1320EDACCD16C0 /* Pods-Github-Clone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_LOADER = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K8CQRWZD84;
 				INFOPLIST_FILE = "$(SRCROOT)/Github-Clone/Resources/Info.plist";
