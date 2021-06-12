@@ -41,9 +41,8 @@ class ListTableViewCell: UITableViewCell, NibLoadable, RepoCellView {
     }
     
     func setProfilePic(imgLink: String){
-        ImagesManager.shared.getImage(from: imgLink) { (image) in
-            self.UserImg.image = image
+        if let imgURL = URL(string: imgLink){
+            UserImg.load(url: imgURL)
         }
     }
-
 }

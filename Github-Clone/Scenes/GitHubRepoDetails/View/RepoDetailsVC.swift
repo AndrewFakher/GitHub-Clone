@@ -40,8 +40,8 @@ class RepoDetailsVC: UIViewController {
 }
 extension RepoDetailsVC: RepoDetailsView{
     func setUserImage(imageLink: String) {
-        ImagesManager.shared.getImage(from: imageLink) { (image) in
-            self.userProfile.image = image
+        if let imgURL = URL(string: imageLink){
+            userProfile.load(url: imgURL)
         }
     }
     

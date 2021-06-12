@@ -8,64 +8,21 @@
 
 import UIKit
 
-class ImagesManager {
-    
-    static let shared = ImagesManager()
-    private var cache: NSCache<NSString, UIImage> = NSCache()
-    
-    func getImage(from imagePath: String, completionHandler: @escaping (UIImage?) -> ()) {
-        if let image = cache.object(forKey: imagePath as NSString) {
-            DispatchQueue.main.async {
-                completionHandler(image)
-            }
+extension UIImageView {
+    func load(url: URL,cache: URLCache? = nil) {
+        let cache = cache ?? URLCache.shared
+        let request = URLRequest(url: url)
+        if let data = cache.cachedResponse(for: request)?.data, let image = UIImage(data: data) {
+            self.image = image
         } else {
-            let placeholderImage = #imageLiteral(resourceName: "placeholder")
-            DispatchQueue.main.async {
-                completionHandler(placeholderImage)
-            }
-            guard let url = URL(string: imagePath) else {return}
-            DispatchQueue.global(qos: .background).async { [weak self] in
-                guard let self = self else { return }
-                if let data = try? Data(contentsOf: url) {
-                    let img: UIImage! = UIImage(data: data)
-                    self.cache.setObject(img, forKey: imagePath as NSString)
-                    DispatchQueue.main.async {
-                        completionHandler(img)
-                    }
+            self.image = #imageLiteral(resourceName: "placeholder")
+            URLSession.shared.dataTask(with: request, completionHandler: { (data, response, error) in
+                if let data = data, let response = response, ((response as? HTTPURLResponse)?.statusCode ?? 500) < 300, let image = UIImage(data: data) {
+                    let cachedData = CachedURLResponse(response: response, data: data)
+                    cache.storeCachedResponse(cachedData, for: request)
+                    self.image = image
                 }
-            }
+            }).resume()
         }
     }
 }
-
-//fileprivate let imageCache =  NSCache<AnyObject, AnyObject>()
-//
-//extension UIImageView {
-// 
-// func downloadImage(url: NSURL? , contentMode mode: ContentMode = .scaleAspectFit) {
-//     contentMode = mode
-//     self.image = UIImage(named: "avatar")
-//     guard let url = url else {
-//         return
-//     }
-//     if let cachedImage = imageCache.object(forKey: url) as? UIImage {
-//         self.image = cachedImage
-//     } else {
-//         URLSession.shared.dataTask(with: url as URL, completionHandler: { (data, response, error) in
-//
-//             guard let data = data, error == nil else {
-//                 print(error?.localizedDescription ?? "Image loading error")
-//                 return
-//             }
-//             
-//             DispatchQueue.main.async{
-//                 if let downloadedImage = UIImage(data: data) {
-//                     imageCache.setObject(downloadedImage, forKey: url)
-//                     self.image = downloadedImage
-//                 }
-//             }
-//         }).resume()
-//     }
-// }
-//}
-//
