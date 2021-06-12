@@ -15,12 +15,6 @@ class ReposPresenter{
     private let router = ReposRouter()
 
     private var repos = List<RepoModel>()
-    
-    private var from = 1
-    private var to = 1
-    private var more = Bool()
-    private var query = String()
-    private var searchedQuery = String()
 
     init(view: RepoView){
         self.view = view

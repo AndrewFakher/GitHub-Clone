@@ -18,19 +18,15 @@ extension GitHubListVC: UISearchBarDelegate{
     }
     
     //MARK: SearchBar Delegate
-
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    }
-
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-    }
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let searchedText = searchBar.text else {return}
         if !searchedText.trimmingCharacters(in: .whitespaces).isEmpty, searchedText.count >= 2 {
-            print(searchedText)
             presenter.getSearchedReposFromCach(repoName: searchedText)
         }
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {presenter.getRepos()}
+    }
+    
 }
