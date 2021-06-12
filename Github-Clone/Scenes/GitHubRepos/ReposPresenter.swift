@@ -24,7 +24,8 @@ class ReposPresenter{
 
     func getRepos(){
         view?.showIndicator()
-        repository.getAllRepos { repos, error in
+        repository.getAllRepos {[weak self] repos, error in
+            guard let self = self else {return}
             self.view?.hideIndicator()
             if let repos = repos {
                 self.repos = repos
@@ -39,7 +40,8 @@ class ReposPresenter{
     //MARK: Search a repo from cach
     
     func getSearchedReposFromCach(repoName: String){
-        repository.getSearchedReposFromCach(repoName: repoName) { (repos) in
+        repository.getSearchedReposFromCach(repoName: repoName) {[weak self] (repos) in
+            guard let self = self else {return}
             if let repos = repos {
                 self.repos = repos
                 self.view?.fetchingReposSuccess()

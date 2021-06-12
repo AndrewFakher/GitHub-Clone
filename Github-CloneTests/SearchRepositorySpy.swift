@@ -8,8 +8,23 @@
 
 import Foundation
 import Github_Clone
+
 @testable import Github_Clone
 
-class SearchRepositorySpy{
+class SearchRepositorySpy {
+    private(set) var getReposHasBeenCalled: Bool = false
     
+    func getRepos(finish: @escaping ([RepoModelTest]?) -> Void) {
+        getReposHasBeenCalled = true
+        let recpos = [RepoModelTest(id: 1, name: "grit", full_name: "mojombo/grit", html_url: "https://github.com/mojombo")]
+        finish(recpos)
+    }
+}
+
+
+struct RepoModelTest: Codable {
+    var id: Int?
+    var name: String?
+    var full_name: String?
+    var html_url: String?
 }
